@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d12">
+<meta name="description" content="Một tấm thiệp điện tử cinematic luxury mừng Ngày Phụ nữ Việt Nam 20/10 — gửi yêu thương đến tất cả những người phụ nữ tuyệt vời.">
+<title>20/10 — A Golden Tribute</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--gold:#d8b86a;--gold-light:#f6e6b2;--rose:#d09a9b;--wine:#592738;--ivory:#fff7eb;--muted:#d5c3c8;--bg:#160d12}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:var(--ivory);font-family:'Be Vietnam Pro',sans-serif;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+#scene-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.page{position:relative;z-index:1}
+.gold-text{background:linear-gradient(105deg,#fff2c6 0%,#d6ad4f 27%,#fff0bc 49%,#b78338 68%,#f8e4a4 88%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:goldFlow 9s linear infinite}
+@keyframes goldFlow{to{background-position:220% center}}
+.nav{position:absolute;top:0;left:0;right:0;z-index:8;padding:1.25rem clamp(1rem,5vw,5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:'Playfair Display',serif;letter-spacing:.08em;color:#f2d991;font-size:1.1rem}
+.nav-links{display:flex;gap:1.7rem;font-size:.78rem;color:#e3d1d6}
+.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--gold-light)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;isolation:isolate;overflow:hidden;padding:7.5rem 1.25rem 5rem;background:radial-gradient(ellipse at 50% 42%,rgba(125,54,72,.4),transparent 42%),linear-gradient(180deg,rgba(18,9,14,.38),rgba(22,13,18,.92))}
+.hero:before{content:"";position:absolute;inset:22px;border:1px solid rgba(216,184,106,.3);z-index:-1}
+.hero:after{content:"";position:absolute;width:min(70vw,760px);aspect-ratio:1;border:1px solid rgba(216,184,106,.1);border-radius:50%;box-shadow:0 0 0 40px rgba(216,184,106,.025),0 0 0 90px rgba(216,184,106,.018);z-index:-1;animation:halo 8s ease-in-out infinite alternate}
+@keyframes halo{from{transform:scale(.92);opacity:.5}to{transform:scale(1.06);opacity:1}}
+.hero-content{max-width:1050px;animation:cinemaIn 1.4s cubic-bezier(.2,.75,.2,1) both}
+@keyframes cinemaIn{from{opacity:0;transform:translateY(35px);filter:blur(8px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.kicker{font-size:.69rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light);font-weight:500}
+.hero h1{font-size:clamp(2.8rem,7.4vw,7rem);font-weight:400;line-height:1.02;letter-spacing:-.035em;margin:1.6rem auto 1.35rem}
+.hero h1 em{font-weight:400}
+.hero-copy{max-width:680px;margin:0 auto;color:#e3d5d9;font-weight:300;font-size:clamp(.95rem,1.6vw,1.12rem);line-height:2}
+.hero-date{margin:2rem auto 0;display:flex;align-items:center;justify-content:center;gap:1rem;color:#d7c4b2;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase}
+.hero-date:before,.hero-date:after{content:"";width:42px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.hero-date:after{transform:rotate(180deg)}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.3rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;padding:.95rem 1.4rem;border-radius:999px;position:relative;overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s;font-size:.88rem}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{color:#2b1a20;background:linear-gradient(110deg,#f6e5a8,#c79c43 52%,#f2d991);border:1px solid #ffefbd;box-shadow:0 0 35px rgba(216,184,106,.18)}
+.btn-primary:hover{box-shadow:0 0 48px rgba(216,184,106,.35)}
+.btn-ghost{border:1px solid rgba(216,184,106,.5);background:rgba(255,255,255,.035);color:#f4dfaa;backdrop-filter:blur(10px)}
+.btn-ghost:hover{background:rgba(216,184,106,.1);border-color:var(--gold)}
+.scroll-cue{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.2em;color:#d6c3c8;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.scroll-cue span{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:scrollPulse 1.6s infinite}
+@keyframes scrollPulse{50%{transform:scaleY(.65);transform-origin:top;opacity:.5}}
+.section{max-width:1200px;margin:auto;padding:7rem clamp(1rem,4vw,2rem)}
+.section-head{text-align:center;max-width:760px;margin:0 auto 3.5rem}
+.section-head .kicker{margin-bottom:1rem}
+.section-head h2{font-size:clamp(2.25rem,5vw,4.2rem);line-height:1.1;font-weight:400;margin:.7rem 0 1.1rem}
+.section-head p{color:var(--muted);font-weight:300;line-height:1.9}
+.rule{display:flex;justify-content:center;align-items:center;gap:.7rem;color:var(--gold);margin:1.3rem auto}
+.rule:before,.rule:after{content:"";height:1px;width:44px;background:linear-gradient(90deg,transparent,var(--gold))}
+.rule:after{transform:rotate(180deg)}
+.typing{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;color:#f4dfaa;min-height:3rem;margin:1.2rem 0 .7rem}
+.typing:after{content:"";display:inline-block;height:1.05em;border-right:1px solid var(--gold);vertical-align:middle;margin-left:4px;animation:blink .8s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.card{position:relative;overflow:hidden;border:1px solid rgba(240,218,181,.15);border-radius:22px;padding:1.65rem 1.4rem 1.8rem;min-height:285px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));backdrop-filter:blur(14px);transition:transform .4s,border-color .4s,background .4s}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,transparent 20%,rgba(255,238,189,.08),transparent 60%);transform:translateX(-120%);transition:transform .8s}
+.card:hover{transform:translateY(-8px);border-color:rgba(216,184,106,.55);background:linear-gradient(145deg,rgba(216,184,106,.12),rgba(255,255,255,.025))}
+.card:hover:before{transform:translateX(120%)}
+.card-icon{width:51px;height:51px;display:grid;place-items:center;border:1px solid rgba(216,184,106,.35);border-radius:50%;color:var(--gold-light);background:rgba(216,184,106,.08);font-size:1.1rem}
+.card-number{position:absolute;right:1.4rem;top:1.45rem;color:rgba(216,184,106,.55);font-family:'Playfair Display',serif;font-size:1.15rem}
+.card h3{font-size:1.5rem;color:#f7e8c7;margin:1.4rem 0 .7rem;font-weight:400}
+.card p{font-size:.88rem;line-height:1.85;color:#d8c8cd;font-weight:300;margin:0}
+.quote-band{padding:5.5rem 1.2rem;text-align:center;position:relative;background:linear-gradient(90deg,transparent,rgba(113,46,63,.25),transparent);border-top:1px solid rgba(216,184,106,.12);border-bottom:1px solid rgba(216,184,106,.12)}
+.quote-band blockquote{max-width:900px;margin:auto;font:italic clamp(1.65rem,4vw,3.25rem)/1.45 'Playfair Display',serif;color:#f4e3c4}
+.quote-band .attribution{margin-top:1.4rem;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#cba85a}
+.gift-section{max-width:none;background:radial-gradient(ellipse at 50% 55%,rgba(102,43,59,.2),transparent 60%)}
+.gift-layout{max-width:1050px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.form-panel{padding:clamp(1.3rem,3.5vw,2.5rem);border-radius:26px;border:1px solid rgba(216,184,106,.22);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:0 24px 70px #0002;backdrop-filter:blur(16px)}
+.form-panel h3{font-size:1.8rem;font-weight:400;color:#f5e3b8;margin:0 0 .6rem}
+.form-panel>p{font-size:.87rem;color:#d3c0c6;line-height:1.8;margin:0 0 1.6rem}
+.form-label{display:block;color:#f0ddb0;font-size:.78rem;margin:1rem 0 .35rem}
+.field{width:100%;padding:.9rem 1rem;border:1px solid rgba(255,231,202,.2);border-radius:11px;background:rgba(18,9,14,.5);color:#fff8ef;outline:none}
+.field:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,184,106,.1)}
+.field::placeholder{color:#9f8c93}
+.field option{background:#2a1720;color:#fff}
+.form-panel .btn{width:100%;margin-top:1rem}
+.privacy-note{font-size:.7rem;color:#bca8af;line-height:1.7;margin-top:1rem}
+.envelope-area{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:380px}
+.envelope{position:relative;width:min(370px,82vw);height:235px;perspective:1000px;cursor:pointer;filter:drop-shadow(0 28px 28px rgba(0,0,0,.32));transition:transform .35s}
+.envelope:hover{transform:translateY(-5px)}
+.env-back{position:absolute;inset:0;border-radius:8px;background:linear-gradient(140deg,#9f606e,#542536)}
+.env-letter{position:absolute;left:6%;top:6%;width:88%;height:86%;padding:1.15rem 1rem;text-align:center;border-radius:4px;background:linear-gradient(145deg,#fff8e9,#f1dfc4);color:#56283a;z-index:2;box-shadow:0 4px 16px #27111b2a;transition:top .9s cubic-bezier(.2,.8,.2,1),transform .9s,height .9s}
+.letter-eyebrow{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#a17b35}
+.letter-name{font:1.32rem 'Playfair Display',serif;margin:.7rem 0 .5rem;overflow-wrap:anywhere}
+.letter-message{font:italic .94rem/1.55 'Playfair Display',serif;max-height:5.8rem;overflow:auto}
+.letter-ornament{margin-top:.65rem;color:#aa8132;letter-spacing:.4em}
+.env-flap{position:absolute;top:0;left:0;width:0;height:0;border-left:185px solid transparent;border-right:185px solid transparent;border-top:132px solid #c58a8a;transform-origin:top;transition:transform .75s ease;z-index:4}
+.env-pocket{position:absolute;inset:0;border-radius:8px;background:linear-gradient(145deg,#d4a09b,#985467);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);z-index:3}
+.env-seal{position:absolute;z-index:5;left:50%;top:55%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#fff0b2,#b7842a 75%);border:2px solid #f9e6a8;color:#65293b;box-shadow:0 2px 12px #50223466;transition:opacity .25s}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .env-letter{top:-36%;height:126%;transform:translateY(-12px);z-index:5}
+.envelope.open .env-seal{opacity:0}
+.envelope-hint{font-size:.75rem;color:#cdb8c1;margin-top:1.7rem;text-align:center}
+.closing{padding:5rem 1rem 7rem;text-align:center;background:linear-gradient(180deg,transparent,rgba(82,32,48,.22))}
+.closing .symbol{font-size:1.7rem;color:var(--gold);margin-bottom:1rem}
+.closing h2{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:400;line-height:1.2;margin:0 auto 1rem}
+.closing p{max-width:620px;margin:auto;color:#d7c4c9;line-height:1.9;font-size:.88rem}
+footer{border-top:1px solid rgba(216,184,106,.14);padding:1.5rem 1rem 6rem;text-align:center;color:#a9949d;font-size:.7rem;letter-spacing:.04em}
+.music{position:fixed;right:18px;bottom:18px;z-index:12;display:flex;align-items:center;gap:.7rem;padding:.65rem .8rem;border-radius:999px;background:rgba(26,14,20,.9);border:1px solid rgba(216,184,106,.38);backdrop-filter:blur(15px);box-shadow:0 8px 30px #0004}
+.vinyl{width:39px;height:39px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;color:#f0d27d;border:1px solid #cba84d;background:repeating-radial-gradient(circle,#20161b 0 3px,#48323a 4px 5px)}
+.vinyl.playing{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.music-meta{font-size:.67rem;line-height:1.5;color:#d9c9cd;min-width:83px}
+.music-meta strong{display:block;color:#f4e3b8;font-weight:500}
+.music-toggle{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f3df9d,#c39a40);color:#2b1920}
+.toast{position:fixed;z-index:50;left:50%;bottom:88px;max-width:90vw;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:#fff5df;color:#512637;padding:.85rem 1.15rem;border-radius:14px;box-shadow:0 12px 38px #0005;font-size:.84rem;text-align:center;transition:opacity .3s,transform .3s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.cursor-glow{position:fixed;z-index:10;left:-100px;top:-100px;width:11px;height:11px;border-radius:50%;pointer-events:none;background:#ffe7a4;box-shadow:0 0 18px 5px #d8b86a66;transform:translate(-50%,-50%);mix-blend-mode:screen}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:950px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.gift-layout{grid-template-columns:1fr;max-width:650px}.form-panel{order:1}.envelope-area{order:2;min-height:330px}}
+@media(max-width:560px){.nav{padding:1rem 1.2rem}.nav-links{gap:.8rem;font-size:.68rem}.nav-links a:nth-child(2){display:none}.brand{font-size:1rem}.hero:before{inset:12px}.hero h1{font-size:clamp(2.7rem,13vw,4.3rem)}.hero-copy{line-height:1.8}.hero-date{font-size:.62rem;letter-spacing:.14em}.section{padding:5rem 1rem}.cards{grid-template-columns:1fr}.card{min-height:auto;padding:1.4rem}.quote-band{padding:4rem 1.2rem}.env-flap{border-left-width:41vw;border-right-width:41vw;border-top-width:112px}.envelope{height:210px}.music{right:10px;bottom:10px}.music-meta{display:none}.cursor-glow{display:none}.closing{padding-bottom:6rem}}
+@media(pointer:coarse){.cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="scene-canvas" aria-hidden="true"></canvas>
+<div class="page">
+<nav class="nav" aria-label="Điều hướng chính">
+  <a class="brand" href="#top">ÉCLAT <span style="font-family:'Be Vietnam Pro';font-size:.55em;letter-spacing:.24em">20·10</span></a>
+  <div class="nav-links"><a href="#tribute">Thông điệp</a><a href="#wishes">Lời chúc</a><a href="#gift">Phong thư</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-content">
+    <div class="kicker">Vietnamese Women's Day · 20 October</div>
+    <h1 class="gold-text">Tôn vinh vẻ đẹp<br><em>& bản lĩnh</em> phụ nữ Việt Nam</h1>
+    <p class="hero-copy">Có những vẻ đẹp không chỉ nằm trong ánh mắt hay nụ cười, mà còn tỏa sáng từ lòng nhân ái, sự kiên cường và cách một người phụ nữ làm cho thế giới quanh mình trở nên tốt đẹp hơn.</p>
+    <div class="hero-date">20 tháng 10 · Dành tặng yêu thương</div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#gift">Khám phá món quà <i class="fa-solid fa-arrow-down-long"></i></a>
+      <a class="btn btn-ghost" href="#tribute"><i class="fa-regular fa-heart"></i> Đọc lời tri ân</a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#tribute" aria-label="Cuộn xuống"><span></span>Scroll to discover</a>
+</header>
+
+<main>
+<section class="section" id="tribute">
+  <div class="section-head reveal">
+    <div class="kicker">A tribute to every woman</div>
+    <h2 class="gold-text">Vẻ đẹp của bạn<br>không cần một khuôn mẫu</h2>
+    <div class="rule">✦</div>
+    <div class="typing" id="typing" aria-live="polite"></div>
+    <p>Hôm nay và cả những ngày bình thường nhất, mong bạn nhớ rằng: bạn xứng đáng được lắng nghe, được tôn trọng, được tự do là chính mình và được yêu thương một cách chân thành.</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><span class="card-number">01</span><div class="card-icon"><i class="fa-solid fa-heart"></i></div><h3>Người mẹ</h3><p>Chúc mẹ luôn mạnh khỏe, an yên và có thật nhiều ngày vui. Mong những điều mẹ âm thầm vun đắp được đáp lại bằng sự quan tâm, sẻ chia và những cái ôm ấm áp.</p></article>
+    <article class="card reveal"><span class="card-number">02</span><div class="card-icon"><i class="fa-solid fa-feather-pointed"></i></div><h3>Người cô</h3><p>Kính chúc cô luôn dồi dào sức khỏe, giữ mãi nhiệt huyết và niềm vui trên hành trình trao tri thức. Cảm ơn cô vì đã truyền cảm hứng bằng cả trái tim.</p></article>
+    <article class="card reveal"><span class="card-number">03</span><div class="card-icon"><i class="fa-solid fa-star"></i></div><h3>Người bạn</h3><p>Chúc bạn tự tin theo đuổi ước mơ, dịu dàng với chính mình và không ngừng khám phá những khả năng tuyệt vời. Mong bạn luôn gặp được những người trân trọng mình.</p></article>
+    <article class="card reveal"><span class="card-number">04</span><div class="card-icon"><i class="fa-solid fa-sun"></i></div><h3>Mỗi người phụ nữ</h3><p>Chúc bạn bình an trong tâm hồn, vững vàng trước thử thách và rực rỡ theo cách riêng. Thành công có thể mang nhiều hình hài — mong bạn được tự chọn điều làm mình hạnh phúc.</p></article>
+  </div>
+</section>
+
+<section class="quote-band">
+  <blockquote class="reveal">“Mong bạn không chỉ được tặng hoa trong một ngày, mà còn được trân trọng trong từng khoảnh khắc của cuộc đời.”</blockquote>
+  <div class="attribution">With admiration & gratitude</div>
+</section>
+
+<section class="section gift-section" id="gift">
+  <div class="section-head reveal">
+    <div class="kicker">A little surprise, wrapped in gold</div>
+    <h2 class="gold-text">Một phong thư<br>gửi riêng đến bạn</h2>
+    <p>Điền tên người nhận, chọn một thông điệp và mở phong thư. Một lời chúc nhỏ đôi khi có thể làm ngày hôm nay trở nên đáng nhớ.</p>
+  </div>
+  <div class="gift-layout">
+    <div class="form-panel reveal">
+      <h3>Gửi một điều dịu dàng</h3>
+      <p>Cá nhân hóa tấm thiệp dành cho người phụ nữ bạn muốn gửi lời yêu thương.</p>
+      <label class="form-label" for="recipient">Tên người nhận</label>
+      <input class="field" id="recipient" maxlength="70" placeholder="Ví dụ: Mẹ yêu, cô Lan, Minh Anh..." autocomplete="off">
+      <label class="form-label" for="message-choice">Thông điệp muốn gửi</label>
+      <select class="field" id="message-choice">
+        <option value="Chúc bạn luôn bình an, hạnh phúc và được yêu thương bằng tất cả sự chân thành.">Bình an & hạnh phúc</option>
+        <option value="Chúc bạn luôn tự tin, rực rỡ và can đảm chạm đến những ước mơ của mình.">Tự tin & tỏa sáng</option>
+        <option value="Cảm ơn bạn vì những điều tốt đẹp bạn mang đến. Mong mọi dịu dàng của thế giới đều tìm về bên bạn.">Biết ơn & trân trọng</option>
+        <option value="Chúc bạn thật nhiều sức khỏe, niềm vui và những ngày bình yên bên người mình thương.">Sức khỏe & niềm vui</option>
+        <option value="Mong bạn luôn nhớ giá trị của mình, luôn được lắng nghe, tôn trọng và tự do sống theo điều trái tim mách bảo.">Bản lĩnh & tự do</option>
+      </select>
+      <button class="btn btn-primary" id="open-letter"><i class="fa-solid fa-envelope-open-text"></i> Mở phong thư</button>
+      <button class="btn btn-ghost" id="send-love"><i class="fa-solid fa-wand-magic-sparkles"></i> Gửi yêu thương</button>
+      <div class="privacy-note"><i class="fa-solid fa-lock mr-1"></i> Tên và lời chúc chỉ hiển thị trên thiết bị này; trang web không gửi dữ liệu đi đâu cả.</div>
+    </div>
+    <div class="envelope-area reveal">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Mở hoặc đóng phong thư">
+        <div class="env-back"></div>
+        <div class="env-letter">
+          <div class="letter-eyebrow">A note for you · 20/10</div>
+          <div class="letter-name" id="letter-name">Gửi người phụ nữ tuyệt vời</div>
+          <div class="letter-message" id="letter-message">Chúc bạn luôn bình an, hạnh phúc và được yêu thương bằng tất cả sự chân thành.</div>
+          <div class="letter-ornament">✦ ✧ ✦</div>
+        </div>
+        <div class="env-flap"></div><div class="env-pocket"></div>
+        <div class="env-seal"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="envelope-hint"><i class="fa-regular fa-hand-pointer mr-1"></i> Chạm vào phong thư để mở</div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="symbol">✦</div>
+  <h2 class="gold-text">Bạn là một điều<br>đẹp đẽ của thế giới.</h2>
+  <p>Chúc mừng Ngày Phụ nữ Việt Nam 20/10. Mong mọi người phụ nữ luôn có đủ yêu thương để dịu dàng, đủ tự tin để tỏa sáng và đủ tự do để viết nên câu chuyện của riêng mình.</p>
+  <div class="rule">♡</div>
+</section>
+</main>
+<footer>ÉCLAT · 20 OCTOBER <span style="color:#d8b86a">✦</span> Được tạo nên bằng sự trân trọng và yêu thương.</footer>
+</div>
+
+<div class="music" aria-label="Trình phát nhạc nền">
+  <div class="vinyl" id="vinyl"><i class="fa-solid fa-music"></i></div>
+  <div class="music-meta"><strong>Golden hour</strong><span id="music-status">Nhạc nền đang tắt</span></div>
+  <button class="music-toggle" id="music-toggle" aria-label="Bật hoặc tắt nhạc nền"><i class="fa-solid fa-play" id="music-icon"></i></button>
+</div>
+<div class="cursor-glow" id="cursor-glow"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  'use strict';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Cinematic ambience: falling rose petals and warm gold dust.
+  const canvas = document.getElementById('scene-canvas');
+  const ctx = canvas.getContext('2d');
+  let width=0,height=0,particles=[],pointer={x:-1000,y:-1000};
+  const palette=['#d8b86a','#f6e6b2','#d09a9b','#fff0db','#b77c83'];
+  function makeParticle(first=false){
+    const petal=Math.random()>.72;
+    return {x:Math.random()*width,y:first?Math.random()*height:-25,
+      size:petal?Math.random()*4+2:Math.random()*1.8+.5,
+      speed:Math.random()*.58+.16,drift:(Math.random()-.5)*.48,
+      angle:Math.random()*Math.PI*2,spin:(Math.random()-.5)*.025,
+      phase:Math.random()*6.28,color:palette[Math.floor(Math.random()*palette.length)],
+      alpha:Math.random()*.5+.16,petal};
+  }
+  function resize(){
+    const dpr=Math.min(window.devicePixelRatio||1,2);
+    width=window.innerWidth;height=window.innerHeight;
+    canvas.width=width*dpr;canvas.height=height*dpr;
+    canvas.style.width=width+'px';canvas.style.height=height+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    particles=Array.from({length:Math.min(105,Math.max(38,Math.floor(width/13)))},()=>makeParticle(true));
+  }
+  function draw(){
+    ctx.clearRect(0,0,width,height);
+    particles.forEach(p=>{
+      p.y+=p.speed;p.x+=p.drift+Math.sin(p.phase+=.012)*.25;p.angle+=p.spin;
+      const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy);
+      if(d<110&&d>0){p.x+=dx/d*.3;p.y+=dy/d*.16}
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.angle);ctx.globalAlpha=p.alpha;ctx.fillStyle=p.color;
+      if(p.petal){ctx.beginPath();ctx.moveTo(0,-p.size*1.5);ctx.bezierCurveTo(p.size*1.7,-p.size,p.size*1.5,p.size,0,p.size*1.5);ctx.bezierCurveTo(-p.size*1.5,p.size,-p.size*1.7,-p.size,0,-p.size*1.5);ctx.fill()}
+      else{ctx.beginPath();ctx.arc(0,0,p.size,0,Math.PI*2);ctx.fill()}
+      ctx.restore();
+      if(p.y>height+30||p.x<-30||p.x>width+30)Object.assign(p,makeParticle());
+    });
+    if(!reduced)requestAnimationFrame(draw);
+  }
+  resize();draw();window.addEventListener('resize',resize);
+  if(!reduced)window.addEventListener('pointermove',e=>{pointer.x=e.clientX;pointer.y=e.clientY});
+  const glow=document.getElementById('cursor-glow');
+  window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+
+  // Reveal sections as they enter the viewport.
+  const revealEls=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduced){
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+    }),{threshold:.12});
+    revealEls.forEach(el=>observer.observe(el));
+  }else revealEls.forEach(el=>el.classList.add('visible'));
+
+  // Rotating typing message.
+  const lines=[
+    'Bạn xứng đáng được yêu thương, hôm nay và mỗi ngày.',
+    'Hãy luôn tự hào về hành trình và phiên bản của chính mình.',
+    'Mong bạn được trân trọng vì chính con người bạn.'
+  ];
+  const typing=document.getElementById('typing');
+  let line=0,index=0,erase=false;
+  function typeLine(){
+    if(reduced){typing.textContent=lines[0];return}
+    const s=lines[line];typing.textContent=s.slice(0,index);
+    if(!erase&&index<s.length){index++;setTimeout(typeLine,48)}
+    else if(!erase){erase=true;setTimeout(typeLine,1800)}
+    else if(index>0){index--;setTimeout(typeLine,22)}
+    else{erase=false;line=(line+1)%lines.length;setTimeout(typeLine,280)}
+  }
+  typeLine();
+
+  // Personalized letter.
+  const envelope=document.getElementById('envelope');
+  const recipient=document.getElementById('recipient');
+  const choice=document.getElementById('message-choice');
+  const letterName=document.getElementById('letter-name');
+  const letterMessage=document.getElementById('letter-message');
+  const toast=document.getElementById('toast');let toastTimer;
+  function updateLetter(){
+    const name=recipient.value.trim();
+    letterName.textContent=name?'Gửi tặng: '+name:'Gửi người phụ nữ tuyệt vời';
+    letterMessage.textContent=choice.value;
+  }
+  recipient.addEventListener('input',updateLetter);choice.addEventListener('change',updateLetter);
+  function notify(message){
+    toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);
+    toastTimer=setTimeout(()=>toast.classList.remove('show'),3000);
+  }
+  function petalBurst(){
+    if(reduced)return;
+    const symbols=['✦','✧','❀','♥','✿'];
+    for(let i=0;i<75;i++){
+      const el=document.createElement('span');el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      Object.assign(el.style,{position:'fixed',left:(35+Math.random()*30)+'vw',top:(34+Math.random()*25)+'vh',
+        zIndex:45,pointerEvents:'none',fontSize:(11+Math.random()*19)+'px',
+        color:palette[Math.floor(Math.random()*palette.length)],textShadow:'0 0 12px #d8b86a88',
+        opacity:'1',transition:'transform 1.7s cubic-bezier(.12,.7,.2,1),opacity 1.7s ease'});
+      document.body.appendChild(el);
+      requestAnimationFrame(()=>{el.style.transform=`translate(${(Math.random()-.5)*innerWidth*1.15}px,${(Math.random()-.5)*innerHeight*.9}px) rotate(${Math.random()*650-325}deg)`;el.style.opacity='0'});
+      setTimeout(()=>el.remove(),1800);
+    }
+  }
+  function toggleEnvelope(forceOpen){
+    updateLetter();
+    const open=typeof forceOpen==='boolean'?forceOpen:!envelope.classList.contains('open');
+    envelope.classList.toggle('open',open);
+    if(open){petalBurst();notify('Một lời chúc nhỏ, gửi bằng tất cả sự trân trọng.')}
+  }
+  document.getElementById('open-letter').addEventListener('click',()=>toggleEnvelope(true));
+  envelope.addEventListener('click',()=>toggleEnvelope());
+  envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleEnvelope()}});
+  document.getElementById('send-love').addEventListener('click',()=>{
+    toggleEnvelope(true);petalBurst();notify('Hãy trao lời chúc này đến người phụ nữ bạn quý mến!');
+  });
+
+  // Original ambient tones synthesized locally with Web Audio (no external audio file).
+  let audioContext=null,masterGain=null,musicInterval=null,musicOn=false,note=0;
+  const notes=[261.63,329.63,392,493.88,392,329.63,293.66,349.23,440,523.25,440,349.23];
+  function playNote(freq){
+    if(!audioContext||!masterGain||!musicOn)return;
+    const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+    osc.type='sine';osc.frequency.value=freq;
+    gain.gain.setValueAtTime(.0001,audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(.045,audioContext.currentTime+.07);
+    gain.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+1.9);
+    osc.connect(gain);gain.connect(masterGain);osc.start();osc.stop(audioContext.currentTime+2);
+  }
+  async function startMusic(){
+    const AudioCtx=window.AudioContext||window.webkitAudioContext;
+    if(!AudioCtx){notify('Trình duyệt chưa hỗ trợ phát nhạc nền.');return}
+    try{
+      audioContext=audioContext||new AudioCtx();
+      await audioContext.resume();
+      masterGain=masterGain||audioContext.createGain();masterGain.gain.value=.28;
+      if(!masterGain.connected){masterGain.connect(audioContext.destination);masterGain.connected=true}
+      musicOn=true;playNote(notes[note++%notes.length]);
+      clearInterval(musicInterval);musicInterval=setInterval(()=>playNote(notes[note++%notes.length]),680);
+      document.getElementById('vinyl').classList.add('playing');
+      document.getElementById('music-icon').className='fa-solid fa-pause';
+      document.getElementById('music-status').textContent='Nhạc nền đang phát';
+    }catch(err){notify('Không thể khởi động âm thanh. Hãy thử lại.')}
+  }
+  function stopMusic(){
+    musicOn=false;clearInterval(musicInterval);
+    if(masterGain&&audioContext)masterGain.gain.setTargetAtTime(.0001,audioContext.currentTime,.08);
+    document.getElementById('vinyl').classList.remove('playing');
+    document.getElementById('music-icon').className='fa-solid fa-play';
+    document.getElementById('music-status').textContent='Nhạc nền đang tắt';
+  }
+  document.getElementById('music-toggle').addEventListener('click',()=>{
+    if(musicOn)stopMusic();
+    else{if(masterGain&&audioContext)masterGain.gain.setTargetAtTime(.28,audioContext.currentTime,.08);startMusic()}
+  });
+
+  // Button ripple effect.
+  document.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('click',e=>{
+    const rect=btn.getBoundingClientRect(),diameter=Math.max(rect.width,rect.height);
+    const ripple=document.createElement('span');
+    Object.assign(ripple.style,{position:'absolute',width:diameter+'px',height:diameter+'px',left:(e.clientX-rect.left-diameter/2)+'px',
+      top:(e.clientY-rect.top-diameter/2)+'px',borderRadius:'50%',background:'rgba(255,255,255,.25)',
+      transform:'scale(0)',transition:'transform .55s,opacity .55s',pointerEvents:'none'});
+    btn.appendChild(ripple);requestAnimationFrame(()=>{ripple.style.transform='scale(2.6)';ripple.style.opacity='0'});
+    setTimeout(()=>ripple.remove(),600);
+  }));
+})();
+</script>
+</body>
+</html>
